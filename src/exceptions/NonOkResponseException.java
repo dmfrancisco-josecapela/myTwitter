@@ -9,9 +9,9 @@ import org.apache.http.client.ClientProtocolException;
  */
 public class NonOkResponseException extends ClientProtocolException
 {
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	private int code;
+    private int code;
     private String reason;
     private String twitterError; // Para mensagens de erro específicas do twitter
 
@@ -35,6 +35,6 @@ public class NonOkResponseException extends ClientProtocolException
 
     /** Mensagem de erro que o utilizador possa entender */
     public String getFriendlyMessage() {
-    	return twitterError.isEmpty()? reason : twitterError;
+        return twitterError.isEmpty()? reason : twitterError;
     }
 }

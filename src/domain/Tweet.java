@@ -7,7 +7,7 @@ package domain;
  */
 public class Tweet
 {
-	public static final int MAX_LENGTH = 140; // Número máximo de caracteres
+    public static final int MAX_LENGTH = 140; // Número máximo de caracteres
 
     private String id;
     private String createdAt;
@@ -77,26 +77,26 @@ public class Tweet
         this.replyToUserId = replyToUserId;
     }
 
-	public User getAuthor() {
-		return author;
-	}
+    public User getAuthor() {
+        return author;
+    }
 
-	public void setAuthor(User author) {
-		this.author = author;
-	}
+    public void setAuthor(User author) {
+        this.author = author;
+    }
 
-	/** Devolve a mensagem da estrutura tweet (incluindo autor e data) */
-	public String toString()
-	{
-		String str = "\"";
+    /** Devolve a mensagem da estrutura tweet (incluindo autor e data) */
+    public String toString()
+    {
+        String str = "\"";
 
-		if (text.length() > 70) {
-			str += text.substring(0, 70) + "\n";
-			str += text.substring(70);
-		}
-		else str += text;
-		str += "\"\n  by "+ this.author.getName() +" at "+ createdAt +".";
+        if (text.length() > 70) {
+            str += text.substring(0, 70) + "\n";
+            str += text.substring(70);
+        }
+        else str += text;
+        str += "\"\n  by "+ this.author.getName() +" at "+ createdAt +".";
 
-		return str;
-	}
+        return str;
+    }
 }
